@@ -1,9 +1,8 @@
 import VueRouter from 'vue-router';
-import Home from '@/components/containers/home'
-import JobList from '@/components/containers/joblist'
+const Home = r => require.ensure([], () => r(require('@/modules/page1')));
+const JobList = r => require.ensure([], () => r(require('@/modules/page2')));
 
 export default new VueRouter({
-  mode: 'history',
   routes: [
     {
       path: '/home',
