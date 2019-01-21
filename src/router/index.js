@@ -1,6 +1,6 @@
 import VueRouter from 'vue-router';
-const Home = r => require.ensure([], () => r(require('@/modules/page1')));
-const JobList = r => require.ensure([], () => r(require('@/modules/page2')));
+const Home = r => require.ensure([], () => r(require('@/modules/page1')),'page');
+const JobList = r => require.ensure([], () => r(require('@/modules/page2')),'page');
 
 export default new VueRouter({
   routes: [
